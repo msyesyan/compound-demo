@@ -21,3 +21,12 @@
 
 */
 
+var User = define('User', function () {
+    property('email', String);
+    property('encrypt_password', String);
+    
+    property('created_at', Date, { default: new Date })
+    property('updated_at', Date, { default: new Date })
+
+    set('restPath', pathTo.users);
+});
