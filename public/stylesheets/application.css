@@ -1,0 +1,30 @@
+@import "bootstrap.min.css";
+@import "bootstrap-theme.min.css";
+/* footer======================================================== */
+.footer {
+  text-align: left;
+  padding-top: 40px;
+  padding-bottom: 30px;
+  margin-top: 100px;
+  color: #777;
+  border-top: 1px solid #e5e5e5;
+}
+.footer .social {
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.footer .social .social-buttons {
+  display: inline-block;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+}
+.footer .social .social-buttons li {
+  display: inline-block;
+  line-height: 1;
+  padding: 5px 8px;
+}
+.footer .social .social-buttons li :first-child {
+  padding-left: 0;
+}
