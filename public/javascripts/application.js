@@ -1,6 +1,9 @@
-(function() {
-  require('bootstrap.min.js');
+/*
+  Add your application's coffee-script code here
+*/
 
-  require('rails.js');
+
+(function() {
+
 
 }).call(this);

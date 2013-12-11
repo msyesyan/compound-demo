@@ -12,10 +12,7 @@ module.exports = function (compound, User) {
   //validates password length
 
   User.beforeSave = function(next) {
-    console.log('beforeSave');
-      console.log('this.password',this.password)
     if (this.password) {
-      console.log('this.password',this.password)
       this.encryptPassword();
     }
 
@@ -23,14 +20,13 @@ module.exports = function (compound, User) {
     next();
   }
 
+  User.verifyPassword = function(password, encrypt_password) {
+    return bcrypt.compareSync(password, encrypt_password);
+  }
+
   User.prototype.encryptPassword = function() {
     var salt = bcrypt.genSaltSync(10);
     var hash = bcrypt.hashSync(this.password, salt);
     this.encrypt_password = hash;
   }
-
-  User.prototype.checkPassword = function(password) {
-    return bcrypt.compareSync(password, this.encrypt_password);
-  }
-
 };
