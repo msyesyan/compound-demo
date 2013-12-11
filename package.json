@@ -13,6 +13,9 @@
   , "stylus": "latest"
   , "seedjs": "latest"
   , "co-assets-compiler": "*"
+  , "bcrypt": "latest"
+  , "passport": "latest"
+  , "passport-local": "latest"
   },
   "devDependencies":
   { "nodeunit": "*"

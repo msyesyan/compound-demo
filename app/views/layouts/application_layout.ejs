@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title><%= title %></title>
 		<meta charset="utf8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<%- stylesheetLinkTag('application') %>
@@ -27,6 +26,13 @@
 				</div>
 				<nav class="collapse navbar-collapse" role="navigation">
 					<ul class="nav navbar-nav">
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<% if(currentUser) { %>
+							<li><%- linkTo('登出', pathTo.logout) %></li>
+						<% } else { %>
+							<li><%- linkTo('登录', pathTo.login) %></li>
+						<% } %>
 					</ul>
 				</nav>
 			</div>
