@@ -29,7 +29,7 @@
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 						<% if(currentUser) { %>
-							<li><%- linkTo('登出', pathTo.logout) %></li>
+							<li><%- linkTo('登出', '/logout') %></li>
 						<% } else { %>
 							<li><%- linkTo('登录', pathTo.login) %></li>
 						<% } %>

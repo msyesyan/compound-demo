@@ -1,15 +1,17 @@
 <div class="row" style="padding-top: 70px;">
-    <div class="col-md-6 col-md-offset-3">
-        <form class="form-horizontal" role="form" action="/login" method="POST">
-            <div class="form-group">
-                <%- inputTag({name: 'email', class: 'form-control input-lg', placeholder: 'Enter email'}) %>
-            </div>
-            <div class="form-group">
-                <%- inputTag({type: 'password', name: 'password', class: 'form-control input-lg', placeholder: 'Enter password'}) %>
-            </div>
-            <div class="form-group">
-                <%- submitTag('Sign in', {class: 'btn btn-lg btn-primary'}) %>
-            </div>
-        </form>
-    </div>
+	<div class="col-md-6 col-md-offset-3">
+		<% if (request.session.messages) { var errorClass = request.session.messages.pop() == undefined ? "" : "has-error"} %>
+		<% console.log(request.session.messages.pop(), errorClass) %>
+		<form class="form-horizontal" role="form" action="/login" method="POST">
+			<div class="form-group <%- errorClass %>">
+				<%- inputTag({name: 'email', class: 'form-control input-lg', placeholder: 'Enter email'}) %>
+			</div>
+			<div class="form-group">
+				<%- inputTag({type: 'password', name: 'password', class: 'form-control input-lg', placeholder: 'Enter password'}) %>
+			</div>
+			<div class="form-group">
+				<%- submitTag('Sign in', {class: 'btn btn-lg btn-primary'}) %>
+			</div>
+		</form>
+	</div>
 </div>

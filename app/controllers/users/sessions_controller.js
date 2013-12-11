@@ -6,8 +6,3 @@ action('new', function() {
   }
   render();
 });
-
-action('destroy', function() {
-  delete session.passport.user
-  redirect(pathTo.root);
-})
